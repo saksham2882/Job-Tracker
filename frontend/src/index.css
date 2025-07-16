@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+@import "tippy.js/dist/tippy.css";
+@import "tippy.js/themes/light-border.css";
+
+
+:root {
+  --radius: 0.65rem;
+  --bg: oklch(95.835% 0.0086 16.611);
+  --primary: oklch(28.43% 0.14769 288.732);
+  --primary-hover: oklch(44.668% 0.09148 298.249);
+  --text: oklch(16.98% 0.00621 285.683);
+  --text-1: oklch(95.552% 0.01297 16.924);
+  --card: oklch(98.894% 0.00531 16.082 / 0.988);
+  --border: oklch(83.298% 0.04179 285.434);
+  --secondary: oklch(0.274 0.006 286.033);
+  --button: oklch(72.64% 0.0844 274.209);
+  --danger: oklch(0.646 0.222 41.116);
+  --home: oklch(94.362% 0.02713 306.924);
+  --home-1: oklch(88.714% 0.05496 306.599);
+}
+
+[data-theme="dark"] {
+  --bg: oklch(17.394% 0.00411 285.902);
+  --primary: oklch(78.337% 0.13223 139.715 / 0.886);
+  --primary-hover: oklch(73.097% 0.08148 139.947 / 0.886);
+  --text: oklch(88.43% 0.01548 17.094);
+  --text-1: oklch(15.102% 0.0064 285.578);
+  --card: oklch(21.427% 0.00391 285.981);
+  --border: oklch(1 0 0 / 10%);
+  --secondary: oklch(66.521% 0.02355 285.704);
+  --button: oklch(60.997% 0.1026 131.946);
+  --danger: oklch(55.834% 0.15107 41.17);
+  --home: oklch(17.394% 0.00411 285.902);
+  --home-1: oklch(19.258% 0.00602 285.777);
+}
+
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+
+.tippy-box[data-theme~="light-border"] {
+  border: 3px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--home);
+}
+
+.tippy-box[data-theme~="light-border"] .tippy-content {
+  padding: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--button);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--card);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+.custom-calendar-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn {
+  @apply px-3 sm:px-4 py-2 rounded-lg font-medium transition-all flex items-center justify-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-[var(--primary)]/90 text-[var(--text-1)] hover:opacity-80 cursor-pointer font-semibold;
+}
+
+.btn-danger {
+  @apply bg-[var(--danger)]/70 text-white hover:bg-red-600 cursor-pointer;
+}
+
+.btn-outline {
+  @apply border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white;
+}
+
+.input {
+  @apply w-full px-3 py-2 border border-[var(--border)] rounded-lg bg-[var(--card)] text-[var(--text)] focus:ring-1 focus:ring-[var(--primary)];
+}
+
+.links{
+  @apply text-[var(--secondary)] hover:text-[var(--primary)]/80 text-sm sm:text-base
+}
+
+.home-icons{
+  @apply text-4xl sm:text-5xl text-[var(--primary)]
+}
+
+.heading{
+  @apply text-[15px] sm:text-base font-semibold text-[var(--primary)] mb-3 sm:mb-4 flex items-center gap-2
+}
+
+.heading-div{
+  @apply bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 sm:p-6 shadow-md
+}
+
+.error{
+  @apply text-[var(--danger)] mb-4 text-center text-[13px] sm:text-[15px]
+}
+
+h1,
+h2,
+h3 {
+  @apply font-semibold text-[var(--primary)];
+}
+
+
+/* ----------- FullCalendar Custom Styles --------------- */
+.fc .fc-toolbar {
+  @apply flex flex-row items-center justify-between gap-2 sm:gap-4 p-2 bg-[var(--card)] rounded-lg;
+}
+
+.fc .fc-toolbar-title {
+  @apply text-lg sm:text-xl lg:text-2xl text-center font-bold text-[var(--primary)] order-1 sm:order-2;
+}
+
+.fc .fc-button {
+  @apply px-3 py-1 text-sm sm:text-base bg-[var(--primary)] text-white hover:bg-[var(--accent)] rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--accent)];
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):hover {
+  @apply bg-[var(--accent)] text-white;
+}
+
+.fc .fc-button-group {
+  @apply flex gap-1;
+}
+
+.fc .fc-daygrid-day {
+  @apply text-xs sm:text-sm;
+}
+
+.fc .fc-daygrid-day-number {
+  @apply text-xs sm:text-sm;
+}
+
+.fc .fc-col-header-cell-cushion {
+  @apply text-xs sm:text-sm font-medium text-[var(--secondary)];
+}
