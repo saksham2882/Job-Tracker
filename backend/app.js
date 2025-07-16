@@ -25,7 +25,7 @@ app.use('/api/users/forgot-password', forgotPasswordLimiter);
 
 // middleware
 app.use(cors({ 
-    origin: process.env.CLIENT_URL || 'http://localhost:5173', 
+    origin: process.env.CLIENT_URL || 'https://trackmyjobs.vercel.app', 
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -36,7 +36,13 @@ app.use(fileUpload({
     tempFileDir: '/tmp/',
 }));
 
+
+// wakeUp Endpoint
+app.get('/api/health', (req, res) => res.status(200).json({ status: 'OK' }));
+
 // Routes
+app.get('/', (req, res) => res.status(200).json({ message: 'JobTracker Backend API Working', status: 'OK' }))
+
 app.use('/api/users', userRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/notifications', notificationRoutes);

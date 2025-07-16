@@ -18,8 +18,15 @@ import Layout from "./components/Layouts/Layout";
 import ToastMessage from "./components/ToastMessage";
 import "./index.css";
 import JobDetails from "./pages/Jobs/JobDetails";
+import axios from "axios";
 
 function App() {
+  useEffect(() => {
+    axios.get(`${process.env.VITE_API_URL}/health`, { withCredentials: true })
+      .then(() => console.log('Backend awake'))
+      .catch(err => console.error('Wake-up failed:', err));
+  }, []);
+
   return (
     <AuthProvider>
       <ThemeProvider>

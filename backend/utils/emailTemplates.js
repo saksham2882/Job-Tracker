@@ -83,11 +83,11 @@ export const getResetPasswordTemplate = (fullName, resetCode) => {
             <p>We received a request to reset your JobTracker account password. Please use the following 6-digit code to reset your password:</p>
             <div class="reset-code">${resetCode}</div>
             <p>This code is valid for 1 hour. If you did not request a password reset, please ignore this email or contact our support team.</p>
-            <a href="#" class="button">Reset Password</a>
+            <a href="https://trackmyjobs.vercel.app/reset-password" class="button">Reset Password</a>
         </div>
         <div class="footer">
             <p>Best regards,<br>JobTracker Support Team</p>
-            <p><a href="#">Contact Support</a> | <a href="#">Visit JobTracker</a></p>
+            <p><a href="https://trackmyjobs.vercel.app">Contact Support</a> | <a href="https://trackmyjobs.vercel.app">Visit JobTracker</a></p>
         </div>
     </div>
 </body>
