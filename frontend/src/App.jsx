@@ -19,6 +19,7 @@ import ToastMessage from "./components/ToastMessage";
 import "./index.css";
 import JobDetails from "./pages/Jobs/JobDetails";
 import axios from "axios";
+import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
