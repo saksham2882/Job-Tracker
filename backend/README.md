@@ -1,6 +1,7 @@
-# JobTracker Backend
+# JobTracker Backend 🧑‍💻
+The backend for the JobTracker application, providing a secure and efficient RESTful API to manage users, jobs, updates, notifications, and application tracking.
 
-The backend for the JobTracker application, providing a RESTful API to manage users, jobs, and notifications.
+---
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)
@@ -15,6 +16,8 @@ The backend for the JobTracker application, providing a RESTful API to manage us
   - [User Routes](#user-routes)
   - [Job Routes](#job-routes)
   - [Notification Routes](#notification-routes)
+ 
+---
 
 ## Tech Stack
 - **Node.js**: JavaScript runtime for server-side applications.
@@ -28,6 +31,8 @@ The backend for the JobTracker application, providing a RESTful API to manage us
 - **Node Cron**: Scheduled tasks (e.g., reminder).
 - **Express Validator**: Data validation.
 - **Express Rate Limit**: Rate-limiting API requests.
+
+---
 
 ## Project Structure
 ```
@@ -60,6 +65,8 @@ backend/
 ├── package.json
 └── scheduler.js
 ```
+
+---
 
 ## Setup and Installation
 
@@ -112,6 +119,7 @@ npm run dev
 Server runs on `http://localhost:5000` (or `PORT` from `.env`). 
 
 ---
+
 # API Documentation
 Base URL: `https://job-tracker-lpiv.onrender.com/api`
 
@@ -127,7 +135,7 @@ Base URL: `https://job-tracker-lpiv.onrender.com/api`
   }
   ```
 
-## 1. User Routes
+## User Routes
 All routes prefixed with `/api/users`.
 
 | Endpoint              | Method | Description                        | Auth Required |
@@ -304,8 +312,7 @@ All routes prefixed with `/api/users`.
   ```
 
 
-
-## 2. Job Routes
+## Job Routes
 All routes prefixed with `/api/jobs`. All require authentication.
 
 | Endpoint         | Method | Description                     | Auth Required |
@@ -484,6 +491,7 @@ All routes prefixed with `/api/jobs`. All require authentication.
   {
     "message": "Disabled Reminder for all jobs.",
   }
+
 
 
 ## Notification Routes
