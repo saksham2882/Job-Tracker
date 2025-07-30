@@ -1,6 +1,8 @@
-# JobTracker Frontend
+# JobTracker Frontend 🗓️
 
 The frontend for **JobTracker**, a powerful and intuitive tool to manage and track job applications seamlessly. Built with React and Vite, styled with Tailwind CSS, deployed on Vercel, and integrated with a Node.js backend. Supports **Progressive Web App (PWA)** functionality for app-like experience on any device.
+
+---
 
 ## Table of Contents
 - [Technologies Used](#technologies-used)
@@ -16,6 +18,8 @@ The frontend for **JobTracker**, a powerful and intuitive tool to manage and tra
   - [Running the Development Server](#running-the-development-server)
 - [Contributing](#contributing)
 
+---
+
 ## Technologies Used
 - **React**: JavaScript library for building user interfaces.
 - **Vite**: Fast build tool for modern web projects.
@@ -30,39 +34,43 @@ The frontend for **JobTracker**, a powerful and intuitive tool to manage and tra
 - **React Hot Toast**: Notifications and toasts.
 - **React Icons**: Collection of popular icons.
 
+---
+
 ## Features
 JobTracker offers a comprehensive set of features to streamline your job application process:
 
 - **User Authentication**:
-  - Secure sign-up, sign-in, and password reset with email validation to block disposable emails.(`AuthContext`).
+  - Secure sign-up, sign-in, and password reset with email validation to block disposable emails.
 - **Dashboard**:
   - Centralized hub with:
     - **Bar Charts**: Visualize job application statistics (e.g., applied, interviewing, offers) using Chart.js.
-    - **Interactive Calendar**: Displays deadlines and interview dates (FullCalendar). Clicking a date redirects to the job's details page.
+    - **Interactive Calendar**: Displays deadlines and interview dates. Clicking a date redirects to the job's details page.
     - **Recent Jobs List**: Shows recently added or updated jobs for quick access.
 - **Comprehensive Job Management**:
-  - **Full CRUD**: Create, read, update, and delete job applications (`JobEntryPage`, `EditJobPage`, `JobListPage`, `JobDetails`).
-   - **Advanced Filtering**: Filter by status, priority, source, location, or search terms (`Filters`).
-  - **Pinned Jobs**: Pin important jobs to top (`/api/jobs/:id/pin`).
+  - **Full CRUD**: Create, read, update, and delete job applications.
+   - **Advanced Filtering**: Filter by status, priority, source, location, or search terms.
+  - **Pinned Jobs**: Pin important jobs to top.
   - **Job Notes**: Add and edit specific notes directly in job details.
-  - **Resume Tracking**: Record and manage different resumes tailored for specific companies (`/api/jobs/upload`).
+  - **Resume Tracking**: Record and manage different resumes tailored for specific companies.
    - **Status History**: Tracks job status changes (e.g., Applied → Interviewing).
-  - **Timeline View**: Visualize the complete job application process history(`Timeline` component).
+  - **Timeline View**: Visualize the complete job application process history.
   - **Interview Management**: Add, track, and update multiple interview rounds per job with details like round, date, and comments.
 - **Reminders**:
-  - Automated email reminders 1 and 2 days before job deadlines/interviews (`scheduler.js`, `ReminderContext`).
-  - Toggle reminders per job (`/api/jobs/:id/reminder`).
+  - Automated email reminders 1 and 2 days before job deadlines/interviews.
+  - Toggle reminders per job.
 - **In-App Notifications**:
-  - Real-time notifications for events like job Reminder, additions, updates (`Notifications` component, `/api/notifications`).
+  - Real-time notifications for events like job Reminder, additions, updates.
 - **User Settings**:
-  - Update profile (name) and password (`Settings` page).
-  - Toggle between light and dark themes (`ThemeContext`).
-  - Enable/disable email notifications for all jobs (`/api/users/notification-settings`).
+  - Update profile and password.
+  - Toggle between light and dark themes.
+  - Enable/disable email notifications for all jobs.
 - **Responsive Design**:
-  - Fully responsive UI, optimized for phones, tablets, and laptops (`Tailwind CSS`).
-  - Smooth animations for transitions and interactions (`Framer Motion`).
+  - Fully responsive UI, optimized for phones, tablets, and laptops.
+  - Smooth animations for transitions and interactions.
 - **Progressive Web App (PWA)**:
   - Installable as an app on phones, tablets, and laptops for native-like experience.
+ 
+---
 
 ## Project Structure
 ```
@@ -123,6 +131,8 @@ frontend/
 └── vite.config.js
 ```
 
+---
+
 ## Components and Pages Overview
 
 ### Components
@@ -157,6 +167,7 @@ frontend/
 | `ResetPassword`  | Reset password using code.                     |
 | `Landing`        | Homepage for unauthenticated users.             |
 
+---
 
 ## Setup and Installation
 
@@ -190,6 +201,7 @@ npm run dev
 ```
 Runs on `http://localhost:5173`.
 
+---
 
 ## Contributing
 1. Fork the repository: [saksham2882/Job-Tracker](https://github.com/saksham2882/Job-Tracker).
@@ -197,3 +209,6 @@ Runs on `http://localhost:5173`.
 3. Commit changes: `git commit -m "Add feature"`.
 4. Push to branch: `git push origin feature/your-feature-name`.
 5. Open a pull request on GitHub.
+
+---
+
