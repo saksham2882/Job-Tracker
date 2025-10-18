@@ -23,7 +23,7 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    axios.get(`${process.env.VITE_API_URL}/health`, { withCredentials: true })
+    axios.get(`${import.meta.env.VITE_API_URL}/health`, { withCredentials: true })
       .then(() => console.log('Backend awake'))
       .catch(err => console.error('Wake-up failed:', err));
   }, []);
