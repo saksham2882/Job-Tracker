@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { motion } from "framer-motion";
-import { FaStream, FaSun, FaMoon, FaSignOutAlt, FaBriefcase, FaCog, FaPlusCircle, FaChartBar } from "react-icons/fa";
+import { FaStream, FaSun, FaMoon, FaSignOutAlt, FaBriefcase, FaCog, FaPlusCircle, FaChartBar, FaChartPie } from "react-icons/fa";
 import Modal from "./Modal";
 import Notifications from "./Notifications";
 
@@ -40,6 +40,7 @@ export default function Header({ toggleSidebar }) {
 
           <nav className="hidden lg:flex gap-4 pl-4">
             <NavLink to="/dashboard" className={getNavLinkClass}> <FaChartBar className="text-sm lg:text-base" /> Dashboard </NavLink>
+            <NavLink to="/analytics" className={getNavLinkClass}> <FaChartPie className="text-sm lg:text-base" /> Analytics </NavLink>
             <NavLink to="/jobs/list" className={getNavLinkClass}> <FaBriefcase className="text-sm lg:text-base" /> Jobs </NavLink>
             <NavLink to="/jobs/add" className={getNavLinkClass}> <FaPlusCircle className="text-sm lg:text-base" /> Add Job </NavLink>
             <NavLink to="/settings" className={getNavLinkClass}> <FaCog className="text-sm lg:text-base" /> Settings </NavLink>

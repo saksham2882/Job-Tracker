@@ -7,6 +7,7 @@ import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import Dashboard from "./pages/Dashboard";
+import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 import JobListPage from "./pages/Jobs/JobListPage";
 import JobEntryPage from "./pages/Jobs/JobEntryPage";
 import EditJobPage from "./pages/Jobs/EditJobPage";
@@ -48,6 +49,7 @@ function App() {
                 }
               >
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/analytics" element={<AnalyticsDashboard />} />
                 <Route path="/jobs/list" element={<JobListPage />} />
                 <Route path="/jobs/add" element={<JobEntryPage />} />
                 <Route path="/jobs/edit/:id" element={<EditJobPage />} />

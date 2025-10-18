@@ -9,6 +9,7 @@ import jobRoutes from './routes/jobRoutes.js';
 import notificationRoutes from './routes/notificationRoutes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import fileUpload from 'express-fileupload';
+import analyticsRoutes from './routes/analyticsRoutes.js';
 import './scheduler.js';
 
 dotenv.config();
@@ -46,6 +47,7 @@ app.get('/', (req, res) => res.status(200).json({ message: 'JobTracker Backend A
 app.use('/api/users', userRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 app.use(errorHandler);
 

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaTimes, FaHome, FaBriefcase, FaCog, FaPlusCircle } from "react-icons/fa";
+import { FaTimes, FaHome, FaBriefcase, FaCog, FaPlusCircle, FaChartBar, FaChartPie } from "react-icons/fa";
 
 export default function Sidebar({ isOpen, toggleSidebar }) {
 
@@ -41,6 +41,9 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
         <nav className="flex flex-col gap-3 ml-3">
           <NavLink to="/dashboard" className={getNavLinkClass} onClick={toggleSidebar} >
             <FaHome className="text-sm" /> Dashboard
+          </NavLink>
+          <NavLink to="/analytics" className={getNavLinkClass} onClick={toggleSidebar} >
+            <FaChartPie className="text-sm" /> Analytics
           </NavLink>
           <NavLink to="/jobs/list" className={getNavLinkClass} onClick={toggleSidebar} >
             <FaBriefcase className="text-sm" /> Jobs
